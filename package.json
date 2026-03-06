@@ -12,7 +12,7 @@
     "@sentry/node": "latest",
     "dotenv": "^17.3.1",
     "langchain": "^0.3.0",
-    "openai": "^4.0.0"
+    "openai": "^5.0.0"
   },
   "volta": {
     "node": "20.19.2",
