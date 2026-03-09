@@ -11,7 +11,10 @@ Sentry.init({
     console.log("\n========== Transaction ==========");
     console.log("Transaction:", event.transaction);
     console.log("Op:", event.contexts?.trace?.op);
-    console.log("Data:", JSON.stringify(event.contexts?.trace?.data, null, 2));
+    console.log("Trace ID:", event.contexts?.trace?.trace_id);
+    console.log("Span ID:", event.contexts?.trace?.span_id);
+    console.log("Parent Span ID:", event.contexts?.trace?.parent_span_id);
+    console.log("Origin:", event.contexts?.trace?.data?.["sentry.origin"]);
     console.log("Spans:");
     for (const span of event.spans || []) {
       console.log(
